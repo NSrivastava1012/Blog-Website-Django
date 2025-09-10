@@ -13,7 +13,7 @@ DEBUG = True   # Change to False after testing on PythonAnywhere
 ALLOWED_HOSTS = [
     "127.0.0.1",         # local development
     "localhost",         # local development
-    "<your-username>.pythonanywhere.com",  # replace with your PA username
+    "NSrivastava1012.pythonanywhere.com",  # replace with your PA username
 ]
 
 # Django 4+ requires this for CSRF in production
@@ -94,10 +94,11 @@ STATICFILES_DIRS = [
 ]
 
 # Production (PythonAnywhere will serve from this)
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 
 # Media (user uploads, like blog images)
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
